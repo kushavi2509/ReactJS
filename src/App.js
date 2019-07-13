@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {connect} from "react-redux"
+import {connect} from "react-redux";
+import * as actionCreator  from "./store/actions/actions"
 
 class  App extends Component{
   constructor(props){
@@ -24,7 +25,7 @@ const mapStateToProps=(state)=>{
 
 const mapDispatchToProps=(dispatch)=>{
   return{
-    doSomething:()=> dispatch({type:"doSomething"})
+    doSomething:()=> dispatch(actionCreator.doSomething(1))
   }
 }
 
