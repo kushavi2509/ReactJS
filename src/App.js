@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {connect} from "react-redux";
 import * as actionCreator  from "./store/actions/actions"
+import Form from "./container/Form"
 
 class  App extends Component{
   constructor(props){
@@ -11,21 +12,22 @@ class  App extends Component{
   }
   render(){
     return(
-      <div onClick={this.props.doSomething} >{this.props.data}</div>
-
+      <div>
+        <Form/>
+      </div>
     )
   }
 }
 
 const mapStateToProps=(state)=>{
   return {
-    data:state.data
+    // data:state.data
   }
 }
 
 const mapDispatchToProps=(dispatch)=>{
   return{
-    doSomething:()=> dispatch(actionCreator.doSomething(1))
+    // doSomething:()=> dispatch(actionCreator.doSomething(1))
   }
 }
 

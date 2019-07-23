@@ -1,5 +1,13 @@
 const initialState={
-    data:"Cool carnation"
+    data:"Cool carnation",
+    customerDetail:{
+        name:{},
+        address:{
+            flat:"",
+            Lane:"",
+            Nearby:""
+        }
+    }
 }
 
  const reducer = (state= initialState,action)=>{
@@ -8,9 +16,10 @@ const initialState={
     switch(action.type){
         case("doSomething"):{
             newState.data="cool Only"   
+            break;
         }
          default:{
-
+            break;
         }
     }
     return newState
